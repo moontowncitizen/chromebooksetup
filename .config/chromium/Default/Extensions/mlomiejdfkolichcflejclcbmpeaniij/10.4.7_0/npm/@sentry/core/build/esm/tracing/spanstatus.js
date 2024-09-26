@@ -1,0 +1,4 @@
+const SPAN_STATUS_UNSET = 0;
+const SPAN_STATUS_OK = 1;
+
+export { SPAN_STATUS_OK, SPAN_STATUS_UNSET };

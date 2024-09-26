@@ -1,0 +1,21 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Take back your online privacy by using Startpage as your default search engine."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Startpage — Private Search Engine"
+   },
+   "extensionUrlLanguage": {
+      "description": "Search Engine Language",
+      "message": "english"
+   },
+   "poweredBy": {
+      "message": "Powered by Startpage"
+   },
+   "searchEngineName": {
+      "description": "Search Engine Name",
+      "message": "Startpage - English"
+   }
+}

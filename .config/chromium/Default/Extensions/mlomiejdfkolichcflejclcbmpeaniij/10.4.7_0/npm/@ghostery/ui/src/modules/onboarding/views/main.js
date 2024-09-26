@@ -1,0 +1,94 @@
+import { GHOSTERY_DOMAIN } from '../../../utils/urls.js';
+import Privacy from './privacy.js';
+import OutroSkip from './outro-skip.js';
+import OutroSuccess from './outro-success.js';
+import define from '../../../../../../hybrids/src/define.js';
+import router from '../../../../../../hybrids/src/router.js';
+import { html } from '../../../../../../hybrids/src/template/index.js';
+import { msg } from '../../../../../../hybrids/src/localize.js';
+
+/**
+ * Ghostery Browser Extension
+ * https://www.ghostery.com/
+ *
+ * Copyright 2017-present Ghostery GmbH. All rights reserved.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0
+ */
+
+
+const TERMS_AND_CONDITIONS_URL = `https://www.${GHOSTERY_DOMAIN}/privacy/ghostery-terms-and-conditions?utm_source=gbe&utm_campaign=onboarding`;
+
+const Main = define({
+  [router.connect]: { stack: [Privacy, OutroSkip] },
+  tag: 'ui-onboarding-main-view',
+  renew: false,
+  render: ({ renew }) => html`
+    <template layout="grow column gap">
+      <ui-onboarding-card>
+        <div layout="column gap:5">
+          <section layout="block:center column gap">
+            <ui-text type="body-l" layout="margin:top:2">
+              Welcome to Ghostery
+            </ui-text>
+            <ui-text type="display-m" layout="margin:bottom:5">
+              ${renew
+                ? html`renew GHOSTERY for full protection`
+                : html`Enable Ghostery to get started`}
+            </ui-text>
+          </section>
+        </div>
+        <div layout="column gap:3">
+          <div layout="column gap">
+            <ui-text type="display-2xs" layout="block:center">
+              Your Privacy Features:
+            </ui-text>
+            <div layout="grid:3 gap">
+              <ui-onboarding-feature icon="onboarding-adblocking">
+                Ad-Blocking
+              </ui-onboarding-feature>
+              <ui-onboarding-feature icon="onboarding-anti-tracking">
+                Anti-Tracking
+              </ui-onboarding-feature>
+              <ui-onboarding-feature icon="onboarding-never-consent">
+                Never-Consent
+              </ui-onboarding-feature>
+            </div>
+          </div>
+          <ui-text type="body-s" underline>
+            ${msg.html`
+              Information about web trackers, add-on health and performance telemetry will be shared in accordance with our <a href="${
+                router.url(Privacy)
+              }" target="_blank" rel="noreferrer">Privacy Policy</a>, advancing privacy protection for the Ghostery community. | 'add-on' means 'browser extension'
+            `}
+          </ui-text>
+          <div layout="column gap:2">
+            <ui-button type="success">
+              <a href="${router.url(OutroSuccess)}">
+                ${renew ? html`Enable New Setup` : html`Enable Ghostery`}
+              </a>
+            </ui-button>
+            <ui-onboarding-error-card layout="margin:top">
+              <ui-text type="label-xs" color="error-400" layout="block:center">
+                Without privacy features enabled, only basic functionality of
+                naming trackers is available.
+              </ui-text>
+              <ui-button type="outline-error" size="small">
+                <a href="${router.url(OutroSkip)}">Keep disabled</a>
+              </ui-button>
+            </ui-onboarding-error-card>
+          </div>
+        </div>
+      </ui-onboarding-card>
+      <ui-text type="body-s" layout="block:center margin:3:0" underline>
+        <a href="${TERMS_AND_CONDITIONS_URL}" target="_blank">
+          Terms & Conditions
+        </a>
+      </ui-text>
+    </template>
+  `,
+});
+
+export { Main as default };
