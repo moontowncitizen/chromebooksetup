@@ -1,0 +1,18 @@
+{
+   "content_scripts": [ {
+      "css": [ "gruvbox.css" ],
+      "matches": [ "https://*.openai.com/*" ]
+   } ],
+   "description": "A Gruvbox theme for ChatGPT",
+   "icons": {
+      "128": "logo/GruvboxLogo128.png",
+      "16": "logo/GruvboxLogo16.png",
+      "48": "logo/GruvboxLogo48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl8nZTp6F7aqpdxhf6bstqXO4OkDE4DT85P2bRYgiUEoUNknjxLPEO5LkRhJQonGEKGJFORc6GnPu3dmFY7uzNvfQX+eebqPRPB5rr7SM3v+u7VVZbLchftGxLeGT5WiNM4dBvV6bnnXCObWkkQ1OjdKuvqyRn3dHDmm/AgXqmtDfkcGvIQli8/grQYHxZQ1TlglLw5Un7fn6nxHM1/3625F9HWVg7pHt9q4w69y4/jMBixlgceJeZn2jLEtrtLlY5MZ+GjGXiqcl+x5rOqGtoTb/ZyjptP4uJjCFANMOsJ71K4SeNeCD1xwwLctIU5Z38JKKaVe57ezDU3qPhTz33QIDAQAB",
+   "manifest_version": 3,
+   "name": "ChatGPT Gruvbox Theme",
+   "permissions": [  ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

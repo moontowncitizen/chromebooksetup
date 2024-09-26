@@ -1,0 +1,21 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Holen Sie sich Ihre Online-Privatsphäre zurück; machen Sie Startpage zu Ihrer Standardsuchmaschine."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Startpage — Datenschutz-Suchmaschine"
+   },
+   "extensionUrlLanguage": {
+      "description": "Search Engine Language",
+      "message": "deutsch"
+   },
+   "poweredBy": {
+      "message": "Unterstützt von Startpage"
+   },
+   "searchEngineName": {
+      "description": "Search Engine Name",
+      "message": "Startpage - Deutsch"
+   }
+}

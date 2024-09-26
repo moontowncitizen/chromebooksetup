@@ -1,0 +1,116 @@
+{
+   "24hrformat": {
+      "message": "Usar formato de 24 horas"
+   },
+   "auto_end_time": {
+      "message": "Hora de finalización"
+   },
+   "auto_start_time": {
+      "message": "Hora de inicio"
+   },
+   "automatic_dark_mode": {
+      "message": "Modo oscuro automático"
+   },
+   "back": {
+      "message": "Atrás"
+   },
+   "background_colors": {
+      "message": "Fondo"
+   },
+   "better_todo": {
+      "message": "Mejor lista de tareas pendientes"
+   },
+   "card_assignments": {
+      "message": "Asignaciones de tarjetas"
+   },
+   "card_colors": {
+      "message": "Colores de la tarjeta"
+   },
+   "card_customization": {
+      "message": "Personalización de tarjetas"
+   },
+   "card_grades": {
+      "message": "Grados en tarjetas"
+   },
+   "condensed_cards": {
+      "message": "Tarjetas condensadas"
+   },
+   "custom_font": {
+      "message": "Fuente personalizada"
+   },
+   "dark_mode": {
+      "message": "Modo oscuro"
+   },
+   "dashboard_notes": {
+      "message": "Notas del tablero"
+   },
+   "disable_color": {
+      "message": "Deshabilitar la superposición de colores"
+   },
+   "due": {
+      "message": "Pendiente"
+   },
+   "edit_dark_mode": {
+      "message": "Editar modo oscuro"
+   },
+   "enter_multiple": {
+      "message": "(Ingresa multiple con una coma)"
+   },
+   "enter_url": {
+      "message": "Su url de Canvas:"
+   },
+   "full_width": {
+      "message": "Tablero de ancho completo"
+   },
+   "gpa_calculator": {
+      "message": "Calculadora GPA"
+   },
+   "gpa_settings": {
+      "message": "Configuración GPA"
+   },
+   "grade_hover": {
+      "message": "Mostrar sólo al pasar el mouse"
+   },
+   "gradient_cards": {
+      "message": "Tarjetas de degradado"
+   },
+   "hide_completed": {
+      "message": "Ocultar completado"
+   },
+   "hover_preview": {
+      "message": "Pasa el cursor para obtener una vista previa de los detalles"
+   },
+   "manual_customization": {
+      "message": "Personalización manual"
+   },
+   "max_items": {
+      "message": "Artículos máximos: "
+   },
+   "more_options": {
+      "message": "Mas opciones"
+   },
+   "move_top": {
+      "message": "Moverse hacia arriba"
+   },
+   "relative_due_dates": {
+      "message": "Fechas pendientes relativas"
+   },
+   "report_issue": {
+      "message": "Reportar un problema"
+   },
+   "show_past_due": {
+      "message": "Mostrar vencida"
+   },
+   "text_colors": {
+      "message": "Texto"
+   },
+   "themes": {
+      "message": "Temas"
+   },
+   "updates": {
+      "message": "Actualizaciones"
+   },
+   "useddmm": {
+      "message": "Usar dd/mm"
+   }
+}

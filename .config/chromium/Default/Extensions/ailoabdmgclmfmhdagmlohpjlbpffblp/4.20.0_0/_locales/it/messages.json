@@ -1,0 +1,56 @@
+{
+   "appDesc": {
+      "message": "Naviga liberamente con un accesso a internet sicuro e privato per l’estensione per browser Chrome."
+   },
+   "appDescEdge": {
+      "message": "Naviga liberamente con un accesso a internet sicuro e privato per l’estensione per browser Microsoft Edge."
+   },
+   "appDescFirefox": {
+      "message": "Naviga liberamente con un accesso a internet sicuro e privato per l’estensione per browser Firefox."
+   },
+   "appName": {
+      "message": "Estensione Surfshark VPN"
+   },
+   "appNameEdge": {
+      "message": "Surfshark VPN"
+   },
+   "autofill": {
+      "message": "Compila automaticamente Alt ID su questa pagina"
+   },
+   "bypass": {
+      "message": "Elenco delle esclusioni (N/D)"
+   },
+   "bypassAddDomain": {
+      "message": "Aggiungi all'elenco di elementi da ignorare e ricarica"
+   },
+   "bypassAddDomainPlaceholder": {
+      "message": "Aggiungi $domain$ all'elenco delle esclusioni e ricarica",
+      "placeholders": {
+         "domain": {
+            "content": "$1",
+            "example": "example.com"
+         }
+      }
+   },
+   "bypassRemoveDomain": {
+      "message": "Rimuovi dall'elenco di elementi da ignorare e ricarica"
+   },
+   "bypassRemoveDomainPlaceholder": {
+      "message": "Rimuovi $domain$ 'dall'elenco delle esclusioni e ricarica",
+      "placeholders": {
+         "domain": {
+            "content": "$1",
+            "example": "example.com"
+         }
+      }
+   },
+   "connected": {
+      "message": "Estensione Surfshark VPN. Connessa a"
+   },
+   "disconnected": {
+      "message": "Estensione Surfshark VPN. Non connessa"
+   },
+   "reportAutofillIssue": {
+      "message": "Segnala problema di riempimento automatico"
+   }
+}

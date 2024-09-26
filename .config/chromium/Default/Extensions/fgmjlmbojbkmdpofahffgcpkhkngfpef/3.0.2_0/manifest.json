@@ -1,0 +1,53 @@
+{
+   "action": {
+      "default_area": "navbar",
+      "default_icon": {
+         "128": "icons/sp_icon_128.png",
+         "16": "icons/sp_icon_16.png",
+         "48": "icons/sp_icon_48.png"
+      },
+      "default_title": "__MSG_extensionName__"
+   },
+   "background": {
+      "service_worker": "service-worker.js"
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "https://www.startpage.com/favicon.ico",
+         "is_default": true,
+         "keyword": "@startpage",
+         "name": "__MSG_searchEngineName__",
+         "search_url": "https://www.startpage.com/do/dsearch?q={searchTerms}&cat=web&language=__MSG_extensionUrlLanguage__",
+         "suggest_url": "https://www.startpage.com/suggestions?q={searchTerms}&format=opensearch&segment=startpage.defaultchx&lui=__MSG_extensionUrlLanguage__"
+      }
+   },
+   "content_scripts": [ {
+      "css": [ "css/content.css" ],
+      "js": [ "js/content.js" ],
+      "matches": [ "https://*.startpage.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "declarative_net_request": {
+      "rule_resources": [ {
+         "enabled": true,
+         "id": "ruleset_1",
+         "path": "rules_1.json"
+      } ]
+   },
+   "default_locale": "en",
+   "description": "__MSG_extensionDescription__",
+   "host_permissions": [ "https://*.startpage.com/*" ],
+   "icons": {
+      "128": "icons/sp_icon_128.png",
+      "16": "icons/sp_icon_16.png",
+      "48": "icons/sp_icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgvS/frWiyhMsKpS/MK7Wt7opafAn07kwcdeKkpUJIeBtARJwNp9HdXAFWezV5pr29m/CKZZxi44pOx9tdw0ckchOZE1+1mE2a68tbWG4Ja2yqJgvcqXfPcnCQhtXwPe5LK8LNACnoeurWv4cjSPvrX0W65u3JWkgrDksWtcYpbEs8Xqv4GCN0Do7povXlq9YJcw1A9eH+7cn3SlgelQQ1Axj5uM9a693LpvqG76TL+7/kTy80EJCKNbOQuiPrqMcIPl29zb3czSdkhrNIPDSdrhaloiOqCf4pC2Pe+fL7PtT2dNGX/QMNr4bvtVryHiFxUMibHH7oe6O2Fld4+l2sQIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "90",
+   "name": "__MSG_extensionName__",
+   "permissions": [ "storage", "declarativeNetRequestWithHostAccess" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0.2"
+}

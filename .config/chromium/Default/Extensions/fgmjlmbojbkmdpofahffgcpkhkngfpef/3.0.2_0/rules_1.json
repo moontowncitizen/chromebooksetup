@@ -1,0 +1,18 @@
+[
+  {
+    "id" : 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "Startpage-Extension", "operation": "set", "value": "ext-chrome" },
+        { "header": "Startpage-Extension-Version", "operation": "set", "value": "3.0.2" },
+        { "header": "Startpage-Extension-Segment", "operation": "set", "value": "startpage.defaultchx" }
+      ]
+    },
+    "condition" : {
+      "urlFilter" : "|http*",
+      "resourceTypes" : ["main_frame"]
+    }
+  }
+]

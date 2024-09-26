@@ -1,0 +1,87 @@
+{
+   "checksum": "eb176d5d4a564875db18378f79967361",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13371860685858192",
+            "date_last_used": "0",
+            "guid": "47ab71a7-88ec-4cab-a5a1-440ad302edff",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Coconino Community College",
+            "type": "url",
+            "url": "https://myccc.coconino.edu/coconino/Home"
+         }, {
+            "date_added": "13371860693210033",
+            "date_last_used": "0",
+            "guid": "da16a512-235c-42cf-9773-e1375c2a5683",
+            "id": "8",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "id.quicklaunch.io/passivests?sessionDataKey=2fdffa4c-465f-449c-9f9c-a5a2cc40411b",
+            "type": "url",
+            "url": "https://id.quicklaunch.io/passivests?sessionDataKey=2fdffa4c-465f-449c-9f9c-a5a2cc40411b"
+         }, {
+            "date_added": "13371860701554400",
+            "date_last_used": "0",
+            "guid": "5bd25848-12ef-42bb-a1e0-66166d870038",
+            "id": "9",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Coconino Community College Mail",
+            "type": "url",
+            "url": "https://mail.google.com/mail/u/0/"
+         } ],
+         "date_added": "13371795551738568",
+         "date_last_used": "0",
+         "date_modified": "13371860701554400",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "children": [ {
+               "children": [  ],
+               "date_added": "13371860341479953",
+               "date_last_used": "0",
+               "date_modified": "13371860341479953",
+               "guid": "3890797f-3bd6-496c-88dc-91ecd4339162",
+               "id": "6",
+               "name": "Bookmarks",
+               "type": "folder"
+            } ],
+            "date_added": "13371859899218215",
+            "date_last_used": "0",
+            "date_modified": "13371860341480221",
+            "guid": "112465a2-8750-45c6-b495-f9f335197c09",
+            "id": "5",
+            "name": "Homey",
+            "type": "folder"
+         } ],
+         "date_added": "13371795551738571",
+         "date_last_used": "0",
+         "date_modified": "13371860685858192",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13371795551738576",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

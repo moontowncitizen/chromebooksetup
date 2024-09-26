@@ -1,0 +1,302 @@
+:root {
+  --gruvbox-bg:  #282828!important;
+  --gruvbox-fg: #ebdbb2 !important;
+  --gruvbox-red: #cc241d !important;
+  --gruvbox-green: #98971a !important;
+  --gruvbox-yellow: #d79921 !important;
+  --gruvbox-blue: #3c6e71 !important;
+  --gruvbox-purple: #b16286 !important;
+  --gruvbox-aqua: #689d6a !important;
+  --gruvbox-gray: #a89984 !important;
+  --gruvbox-dark-gray: #928374 !important;
+  --gruvbox-light-gray: #bdae93 !important;
+  --gruvbox-lighter-gray: #d5c4a1 !important;
+  --gruvbox-placeholder: #bdae93 !important;
+  --white: #ebdbb2 !important; /* Overriding white to match Gruvbox light text */
+  --black: #282828 !important; /* Overriding black to match Gruvbox dark background */
+  --gray-50: #fbf1c7 !important; /* Overriding for a lighter background */
+  --gray-100: #ebdbb2 !important; /* Overriding for light text */
+  --gray-200: #d5c4a1 !important; /* A slightly darker shade of gray */
+  --gray-300: #bdae93 !important; /* And so on, progressively getting darker */
+  --gray-400: #a89984 !important;
+  --gray-500: #928374 !important;
+  --gray-600: #7c6f64 !important;
+  --gray-700: #665c54 !important;
+  --gray-800: #504945 !important;
+  --gray-900: #3c3836 !important;
+  --gray-950: #282828 !important;
+  --gizmo-gray-500: #928374 !important;
+  --gizmo-gray-600: #7c6f64 !important;
+  --gizmo-gray-950: #282828 !important;
+  --brand-purple: #b16286 !important; /* Brand color overridden by Gruvbox purple */
+  --font-weight-normal: 400;
+  --font-weight-bold: 700; /* Standard bold */
+  --font-weight-extra-bold: 800;
+}
+
+.dark {
+  --text-primary: var(--gruvbox-fg) !important; /* Light text */
+  --text-secondary: var(
+    --gruvbox-light-gray
+  ) !important; /* Secondary text which is a bit dimmer */
+  --text-tertiary: var(
+    --gruvbox-gray
+  ) !important; /* Tertiary text which is even more dimmed */
+  --surface-primary: var(--gruvbox-bg) !important; /* Darkest background */
+  --surface-secondary: var(
+    --gruvbox-dark-gray
+  ) !important; /* Slightly lighter background */
+  --surface-tertiary: var(
+    --gruvbox-gray
+  ) !important; /* Even lighter background, but still dark */
+  --border-light: rgba(
+    181,
+    118,
+    134,
+    0.1
+  ) !important; /* Light border with a touch of purple */
+  --border-medium: rgba(
+    181,
+    118,
+    134,
+    0.15
+  ) !important; /* Medium border with a touch of purple */
+}
+
+body {
+  font-size: 16px !important; /* Adjust as needed */
+  line-height: 1.6 !important; /* Good for readability */
+  color: var(--gruvbox-fg) !important;
+  background-color: var(--gruvbox-bg) !important;
+}
+
+.header {
+  background-color: var(--gruvbox-dark-gray) !important;
+}
+
+/* For the send message button, ensure proper contrast and visibility */
+button[data-testid="send-button"] {
+  background-color: var(--gruvbox-blue);
+  color: var(--gruvbox-fg);
+  border: 1px solid var(--gruvbox-fg); /* Optional: adds a border for better definition */
+}
+
+/* For the send button when disabled */
+button[data-testid="send-button"]:disabled {
+  background-color: var(--gruvbox-gray);
+  color: var(--gruvbox-dark-gray);
+  border: 1px solid var(--gruvbox-dark-gray);
+}
+
+/* Accessibility: Ensure that interactive elements have a focus style for keyboard navigation */
+button[data-testid="send-button"]:focus {
+  outline: 2px solid var(--gruvbox-yellow); /* Or use 'auto' for the browser default */
+}
+
+/* Adjusting icon colors within buttons, if necessary */
+button[data-testid="send-button"] svg {
+  fill: var(--gruvbox-fg);
+}
+
+input[type="text"],
+textarea {
+  background-color: var(--gruvbox-lighter-gray) !important;
+  color: var(--gruvbox-dark-gray) !important;
+  border: 1px solid var(--gruvbox-gray) !important;
+}
+
+[class*="text-"] {
+  color: var(--gruvbox-fg) !important;
+  font-weight: var(--font-weight-bold) !important;
+}
+
+[class*="text-gray"] {
+  color: var(--gruvbox-bg) !important;
+  font-weight: var(--font-weight-extra-bold) !important;
+}
+[class*="text-gray-600"] {
+  color: var(--gruvbox-fg) !important;
+}
+[class*="text-gray-400"] {
+  color: var(--gruvbox-fg) !important;
+}
+
+.bg-token-surface-secondary > a {
+  color: var(--black) !important;
+}
+.bg-token-surface-secondary > a:hover,
+.bg-token-surface-secondary > a:focus {
+    text-decoration: underline !important;
+}
+
+div:last-child > a[href="/gpts"] {
+  /* light rounded outline */
+  border: 1px solid var(--gruvbox-light-gray) !important;
+}
+
+/* Styling the button using data-testid attribute for specificity */
+button[data-testid="send-button"] {
+  background-color: var(--gruvbox-blue); /* Gruvbox blue for background */
+  color: var(--gruvbox-fg); /* Gruvbox light text color */
+  border-color: var(--gruvbox-red); /* Gruvbox red for border */
+  /* Other styles */
+}
+
+/* Styling for hover state */
+button[data-testid="send-button"]:hover {
+  background-color: var(--gruvbox-gray); /* Different color on hover */
+}
+
+/* Styling for disabled state */
+button[data-testid="send-button"]:disabled {
+  background-color: var(--gruvbox-bg); /* Dark background for disabled state */
+  color: var(--gruvbox-gray); /* Dimmed text color for disabled state */
+  opacity: 0.5; /* Adjust opacity for disabled state */
+}
+
+/* Styling the SVG icon inside the button */
+button[data-testid="send-button"] svg {
+  fill: var(--gruvbox-fg); /* Gruvbox foreground color for the icon */
+}
+
+[class*="text-token-text-secondary"] {
+  color: var(--gruvbox-bg) !important;
+  font-weight: var(--font-weight-extra-bold) !important;
+}
+
+[class*="prompt-"] {
+  background-color: var(--gruvbox-bg) !important;
+  font-weight: var(--font-weight-bold) !important;
+}
+
+/* Make text on dark backgrounds light */
+[class*="dark"] [class*="text-"] {
+  color: var(--gruvbox-fg) !important;
+}
+
+/* Remove the "New" button, I don't care that the Refer a Friend feature is new, so I will remove it with specificity */
+span.text-gray-800.uppercase.font-medium {
+  display: none;
+}
+
+/* Style the textarea */
+#prompt-textarea {
+  background-color: var(--gruvbox-bg) !important;
+  color: var(--gruvbox-fg) !important;
+  border: none !important; /* Removes border */
+  resize: none; /* Keeps resize-none */
+  max-height: 200px; /* Keeps max height */
+  overflow-y: hidden; /* Keeps overflow hidden */
+  padding: 10px 10px 10px 55px; /* Adjust padding as needed */
+}
+
+#prompt-textarea::placeholder {
+  color: var(--gruvbox-placeholder) !important;
+  opacity: 0.5; /* Adjust opacity as needed */
+}
+
+/* Adjust focus styles */
+#prompt-textarea:focus,
+#prompt-textarea:focus-visible {
+  outline: none !important; /* Removes outline */
+}
+
+[class*="bg-light-gray"] {
+  color: var(--gruvbox-bg) !important;
+}
+
+[class*="bg-gray"] {
+  color: var(--gruvbox-bg) !important;
+  background-color: var(--gruvbox-dark-gray) !important;
+}
+
+a {
+  color: var(--gruvbox-blue) !important;
+}
+a:hover {
+  color: var(--gruvbox-purple) !important;
+}
+[class+="te]
+
+button {
+  background-color: var(--gruvbox-dark-gray) !important;
+  color: var(--gruvbox-lighter-gray) !important;
+}
+button:hover {
+  background-color: var(--gruvbox-blue) !important;
+  color: var(--gruvbox-light-gray) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--gruvbox-yellow) !important;
+  font-weight: var(--font-weight-extra-bold) !important;
+}
+
+.font-normal {
+  font-weight: var(--font-weight-bold) !important;
+}
+
+.navbar {
+  background-color: var(--gruvbox-dark-gray) !important;
+  color: var(--gruvbox-fg) !important;
+}
+
+.footer {
+  background-color: var(--gruvbox-dark-gray) !important;
+  color: var(--gruvbox-light-gray) !important;
+}
+
+.modal {
+  background-color: var(--gruvbox-bg) !important;
+  color: var(--gruvbox-fg) !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--gruvbox-bg) !important;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gruvbox-dark-gray) !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gruvbox-gray) !important;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: var(--gruvbox-lighter-gray) !important;
+}
+
+.alert {
+  padding: 20px;
+  background-color: var(--gruvbox-yellow) !important;
+  color: var(--gruvbox-bg) !important;
+}
+.alert.closebtn {
+  margin-left: 15px;
+  color: var(--gruvbox-dark-gray);
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.alert.closebtn:hover {
+  color: var(--gruvbox-fg);
+}
