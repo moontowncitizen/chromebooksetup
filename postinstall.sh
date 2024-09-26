@@ -23,7 +23,8 @@ fi
 
 # Function to log messages
 log_message() {
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" | tee -a "$LOG_FILE"
+    local message="$1"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $message" | tee -a "$LOG_FILE"
 }
 
 # Function to check if a command exists
@@ -33,21 +34,29 @@ command_exists() {
 
 # Function to install a package using DNF if not already installed
 install_dnf_package() {
-    if ! dnf list installed "$1" &>/dev/null; then
-        log_message "Installing $1..."
-        dnf install "$1" -y
+    local package="$1"
+    if ! dnf list installed "$package" &>/dev/null; then
+        log_message "Installing $package..."
+        if ! dnf install "$package" -y; then
+            log_message "Error installing $package"
+            exit 1
+        fi
     else
-        log_message "$1 is already installed."
+        log_message "$package is already installed."
     fi
 }
 
 # Function to uninstall a package using DNF
 uninstall_dnf_package() {
-    if dnf list installed "$1" &>/dev/null; then
-        log_message "Uninstalling $1..."
-        dnf remove "$1" -y
+    local package="$1"
+    if dnf list installed "$package" &>/dev/null; then
+        log_message "Uninstalling $package..."
+        if ! dnf remove "$package" -y; then
+            log_message "Error uninstalling $package"
+            exit 1
+        fi
     else
-        log_message "$1 is not installed."
+        log_message "$package is not installed."
     fi
 }
 
@@ -92,7 +101,10 @@ install_mybash() {
 install_xfce_docklike_plugin() {
     if [ -f "$DOCKLIKE_RPM" ]; then
         log_message "Installing xfce4-docklike-plugin RPM..."
-        rpm -i "$DOCKLIKE_RPM"
+        if ! rpm -i "$DOCKLIKE_RPM"; then
+            log_message "Error installing xfce4-docklike-plugin"
+            exit 1
+        fi
     else
         log_message "Warning: xfce4-docklike-plugin RPM not found at $DOCKLIKE_RPM"
     fi
@@ -121,7 +133,7 @@ else
     log_message "Warning: xfce4-panel-profile directory not found, skipping copy."
 fi
 
-# Install apps
+# Install applications
 log_message "Installing applications..."
 apps=(
     "sassc" "libsass" "nodejs" "kitty" "snapd" "qbittorrent" "libreoffice"
@@ -137,7 +149,7 @@ dnf copr enable atim/starship -y
 dnf install starship -y
 
 # Install Bash Autocomplete
-dnf install bash-completion -y
+install_dnf_package "bash-completion"
 
 # Install Flatpak applications
 log_message "Installing Flatpak applications..."
@@ -146,7 +158,7 @@ flatpak install -y bitwarden spotify
 # Set up Snap
 log_message "Setting up Snap..."
 systemctl start snapd.service
-ln -s /var/lib/snapd/snap /snap
+ln -s /var/lib/snapd/snap /snap || log_message "Warning: Failed to create symlink for Snap"
 snap refresh
 snap install surfshark --edge
 
@@ -175,7 +187,10 @@ set_desktop_background
 log_message "Installing Pulsar..."
 pushd "$INSTALL_STUFF_REPO/rpms" || exit 1
 curl -L -o pulsar.rpm "https://download.pulsar-edit.dev/?os=linux&type=linux_rpm"
-rpm -i pulsar.rpm
+if ! rpm -i pulsar.rpm; then
+    log_message "Error installing Pulsar"
+    exit 1
+fi
 popd || exit 1
 
 # Install icons
@@ -198,8 +213,8 @@ cd Gruvbox-GTK-Theme/themes
 cd
 
 # Flatpak overrides for themes and icons
-sudo flatpak override --filesystem=$HOME/.themes
-sudo flatpak override --filesystem=$HOME/.icons
+sudo flatpak override --filesystem="$HOME/.themes"
+sudo flatpak override --filesystem="$HOME/.icons"
 flatpak override --user --filesystem=xdg-config/gtk-4.0
 sudo flatpak override --filesystem=xdg-config/gtk-4.0
 
