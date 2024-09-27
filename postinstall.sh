@@ -109,17 +109,6 @@ log_message "Copying configuration files..."
 cp -rv "$INSTALL_STUFF_REPO/.config" "$HOME_DIR/"
 cp -rv "$INSTALL_STUFF_REPO/.fonts" "$HOME_DIR/"
 cp -rv "$INSTALL_STUFF_REPO/.icons" "$HOME_DIR/"
-cp -rv "$INSTALL_STUFF_REPO/.local/share/backgrounds" "$HOME_DIR/.local/share/"
-
-# Copy XFCE-specific configurations
-cp -rv "$INSTALL_STUFF_REPO/.local/share/xfce4" "$HOME_DIR/.local/share/"
-
-# Check if xfce4-panel-profile exists before copying
-if [ -d "$INSTALL_STUFF_REPO/.local/share/xfce4-panel-profile" ]; then
-    cp -rv "$INSTALL_STUFF_REPO/.local/share/xfce4-panel-profile" "$HOME_DIR/.local/share/"
-else
-    log_message "Warning: xfce4-panel-profile directory not found, skipping copy."
-fi
 
 # Install apps
 log_message "Installing applications..."
